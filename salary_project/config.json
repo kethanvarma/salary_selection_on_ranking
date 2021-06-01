@@ -1,0 +1,36 @@
+{
+    #file_details
+    "csv_file_details":
+    {
+    "abspath":"F:\\HIghSalary\\salary_project",
+    "csv_file_name":"employee.csv",
+    "delimiter":"|",
+    "delimiter_to_parse_csv_file" : "||"                           
+    },
+    
+    #SQL configuration
+    "database_configuration":
+            {
+            "host":"localhost",
+            "user":"root",
+            "password":"KETHAN@852",
+            "auth_plugin":"mysql_native_password",
+            "database":"depart",
+            "port":"None"
+            },
+            
+    "table_name":"employee_salary", #table name in databse
+    
+    "colnames":["employee_name varchar(25)","id varchar(5)", "department varchar(20)", "salary decimal(12,2) UNIQUE"], #col_names
+    
+    #selection basis
+    "selection_basis":{
+            "rank_selection":"salary", #basis on salary column
+            "rank_number":5,
+            "group_by":"department",
+            "order_by":"salary",
+            "arrange" :"DESC"
+            }
+
+
+}
